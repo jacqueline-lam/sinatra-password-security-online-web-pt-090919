@@ -73,7 +73,7 @@ describe "App" do
       fill_in "password", :with => "test"
       
       click_button "Log In"
-
+      
       expect(page.body).to include(user.username)
     end
   end
@@ -81,7 +81,7 @@ describe "App" do
   describe "GET '/failure'" do 
     it 'displays failure message' do 
       visit '/failure'
-
+      
       expect(page.body).to include("Houston, We Have a Problem")
     end
   end
